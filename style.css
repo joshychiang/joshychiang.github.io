@@ -1,237 +1,48 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #FFFFFF;
-  color: #33475B; /* Dark Blue */
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
+/* This is your "external CSS stylesheet" required by the M1 project.
+  It works *with* Tailwind CSS to set your project-specific styles.
+*/
 
 /* REQUIREMENT: 'change the font for at least one element to a serif font...'
-  This class will be applied to h1, h2, h3 for the serif font.
+  We'll apply this class to our headings (h1, h2) to meet the requirement,
+  while keeping the body text as Arial (sans-serif) as you planned in A4.
 */
 .font-serif-heading {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-/* REQUIREMENT: 'navigation section (using a <nav> element) on each page'
-  This styles the header and nav bar.
+/* REQUIREMENT: 'change the background color of the page'
+  We're setting a default light background for the body content.
+  The nav/footer will use your dark blue.
 */
-header {
-  background-color: #33475B; /* Dark Blue */
-  color: white;
-  padding: 20px 30px;
-  position: sticky;
-  top: 0;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 10;
+body {
+  background-color: #FFFFFF;
+  font-family: Arial, sans-serif; /* Your A4 font choice */
+  color: #33475B; /* Your A4 dark blue for text */
 }
 
-nav {
-  max-width: 1000px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* Custom colors from your A4 plan for Tailwind */
+.bg-nav-blue {
+  background-color: #33475B;
+} /* Dark Blue */
+.bg-accent-light-blue {
+  background-color: #8ECAE6;
+} /* Light Blue */
+.bg-accent-yellow {
+  background-color: #F5CB5C;
+} /* Yellow */
+.text-nav-blue {
+  color: #33475B;
 }
-
-nav h1 {
-  font-size: 1.5rem; /* 24px */
-  margin: 0;
+.text-accent-light-blue {
+  color: #8ECAE6;
 }
-
-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-}
-
-nav li {
-  margin-left: 24px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.2s;
-}
-
-nav a:hover {
-  color: #F5CB5C; /* Yellow */
-}
+.border-accent-sage {
+  border-color: #8AA29E;
+} /* Sage Green */
 
 /* Style for the "active" navigation link */
 nav a.active {
-  color: #F5CB5C; /* Yellow */
-}
-
-/* REQUIREMENT: 'add space (either margin or padding is fine) around the page content'
-  This <main> tag gets padding and is centered.
-*/
-main {
-  max-width: 896px; /* 4xl */
-  margin: 0 auto; /* centers content */
-  padding: 32px; /* p-8 */
-  flex-grow: 1; /* Pushes footer down */
-}
-
-/* Headings */
-h1 {
-  font-size: 2.25rem; /* 36px */
-  margin-bottom: 16px;
-  color: #33475B; /* Dark Blue */
-}
-
-h2 {
-  font-size: 1.875rem; /* 30px */
-  margin-bottom: 24px;
-  color: #33475B; /* Dark Blue */
-}
-
-h3 {
-  font-size: 1.25rem; /* 20px */
-  font-weight: 600;
-  margin-bottom: 8px;
-  color: #33475B; /* Dark Blue */
-}
-
-/* REQUIREMENT: 'a paragraph'
-*/
-p {
-  font-size: 1.125rem; /* 18px */
-  line-height: 1.6;
-  margin-bottom: 24px;
-}
-
-/* REQUIREMENT: 'three images' & 'alt tags'
-  This styles all images inside the main content.
-*/
-main img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* REQUIREMENT: 'a description list'
-*/
-dl {
-  margin-top: 24px;
-}
-dt {
-  font-size: 1.25rem; /* 20px */
-  font-weight: 600;
-  color: #33475B; /* Dark Blue */
-}
-dd {
-  margin-left: 20px;
-  margin-bottom: 24px;
-}
-
-/* REQUIREMENT: 'a list (ordered or unordered)'
-*/
-ul {
-  list-style-type: disc;
-  list-style-position: inside;
-  margin-bottom: 24px;
-  padding-left: 20px;
-}
-ul li {
-  font-size: 1.125rem; /* 18px */
-  line-height: 1.6;
-  margin-bottom: 8px;
-}
-
-/* REQUIREMENT: 'a hyperlink to somewhere on the web outside your website'
-*/
-main a {
-  color: #8ECAE6; /* Light Blue */
+  color: #F5CB5C; /* Yellow accent for active page */
   font-weight: bold;
-  text-decoration: underline;
-}
-main a:hover {
-  color: #F5CB5C; /* Yellow */
 }
 
-/* Special Button style for Resume page */
-.btn {
-  display: inline-block;
-  background-color: #8ECAE6; /* Light Blue */
-  color: #33475B; /* Dark Blue */
-  font-weight: bold;
-  padding: 8px 16px;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: background-color 0.2s;
-  margin-bottom: 24px;
-}
-.btn:hover {
-  background-color: #F5CB5C; /* Yellow */
-  color: #33475B; /* Dark Blue */
-}
-
-
-/* REQUIREMENT: 'At least one page has a unique layout of content'
-  This grid layout is for projects.html
-*/
-.projects-grid {
-  display: grid;
-  grid-template-columns: 1fr; /* Default to 1 column */
-  gap: 24px;
-}
-
-/* On medium screens and up (like tablets/desktops), switch to 2 columns */
-@media (min-width: 768px) {
-  .projects-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-.project-card {
-  border: 2px solid #8AA29E; /* Sage Green */
-  border-radius: 8px;
-  padding: 16px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-}
-.project-card img {
-  margin-bottom: 16px;
-}
-
-/* REQUIREMENT: 'styling changes... in at least 4 elements'
-  1. <strong> (bold) - Used on index.html
-  2. <em> (italic) - Used on experience.html
-  3. .text-blue-600 (color change) - Used on projects.html
-  4. .text-xl (font size change) - Used on contact.html
-*/
-.text-blue-600 {
-  color: #2563eb; /* A distinct blue */
-  font-weight: 500;
-}
-.text-xl {
-  font-size: 1.25rem; /* 20px */
-}
-
-
-/* Footer styling */
-footer {
-  background-color: #33475B; /* Dark Blue */
-  color: white;
-  padding: 24px;
-  margin-top: 32px;
-  text-align: center;
-}
-
-footer p {
-  margin: 0;
-  font-size: 1rem; /* 16px */
-}
-
-footer .footer-note {
-  font-size: 0.875rem; /* 14px */
-  color: #cbd5e1; /* A lighter gray-blue */
-  margin-top: 8px;
-}
