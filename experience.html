@@ -1,25 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Experience - Your Name</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- REQUIREMENT: 'an <title> element (must be present and correct on all pages)' -->
+  <title>Joshua Chiang - Experience</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="experience.html" aria-current="page">Experience</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="resume.html">Resume</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="hobbies.html">Hobbies</a></li>
-    </ul>
-  </nav>
-  <h1>Work Experience</h1>
-  <h2>Research and Projects</h2>
-  <p>I currently work as an undergraduate research assistant in the Jacobberger Group focusing on trapped ion quantum simulation.</p>
-  <p>Previous experience includes signal processing for silicon surface passivation and volunteer work with scheduling coordination.</p>
+
+  <!-- 
+    REQUIREMENT: 'navigation section (using a <nav> element) on each page'
+  -->
+  <header>
+    <nav>
+      <h1 class="font-serif-heading">Joshua Chiang</h1>
+      <ul>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <!-- This is the 'Experience' page, so it gets the 'active' class -->
+        <li><a href="experience.html" class="nav-link active">Experience</a></li>
+        <li><a href="projects.html" class="nav-link">Projects</a></li>
+        <li><a href="resume.html" class="nav-link">Resume</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="hobbies.html" class="nav-link">Hobbies</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- This is one of your '5 interlinked pages' -->
+    <section id="experience">
+      <!-- REQUIREMENT: 'at least two levels of heading elements' (This is H2) -->
+      <h2 class="font-serif-heading">Work & Research Experience</h2>
+
+      <!-- 
+        REQUIREMENT: 'a description list'
+      -->
+      <dl>
+        <div>
+          <dt>June 2024 - Present: [Research Lab Name]</dt>
+          <dd>
+            <!-- REQUIREMENT: 'styling changes... in at least 4 elements' (Element 2: <em>) -->
+            <em>Undergraduate Research Assistant</em>
+            <p>Details about my work history and the most recent updates on my research lab.
+              (Here you can describe the tasks, projects, and skills you gained.)
+            </p>
+          </dd>
+        </div>
+
+        <div>
+          <dt>May 2023 - Aug 2023: [Company Name]</dt>
+          <dd>
+            <em>Engineering Intern</em>
+            <p>Describe your internship experience here. What did you learn? What projects did you
+              contribute to?
+            </p>
+          </dd>
+        </div>
+      </dl>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Joshua Chiang. All Rights Reserved.</p>
+      <p class="footer-note">
+        This website was hand-coded for LIS351 at UW-Madison.
+      </p>
+    </div>
+  </footer>
+
 </body>
+
 </html>

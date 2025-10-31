@@ -1,26 +1,92 @@
 <!DOCTYPE html>
+<!-- 
+  REQUIREMENT: 'an HTML declaration (must be present and correct on all pages)'
+-->
 <html lang="en">
+<!-- 
+  Ensuring WAVE accessibility by setting the language.
+-->
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Home - Your Name</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    REQUIREMENT: 'an <title> element (must be present and correct on all pages)'
+  -->
+  <title>Joshua Chiang - Home</title>
+
+  <!-- 
+    REQUIREMENT: 'add an external CSS stylesheet to your website that all its pages link to'
+  -->
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <nav>
-    <ul>
-      <li><a href="index.html" aria-current="page">Home</a></li>
-      <li><a href="experience.html">Experience</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="resume.html">Resume</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="hobbies.html">Hobbies</a></li>
-    </ul>
-  </nav>
-  <h1>Welcome to My Website</h1>
-  <h2>Introduction</h2>
-  <p>Hello! My name is Your Name. I am an undergraduate electrical engineering student with interests in research and technology projects.</p>
-  <p>Use the navigation bar above to explore my experience, projects, resume, and more.</p>
-  <img src="images/profile.jpg" alt="Profile picture of Your Name"/>
+
+  <!-- 
+    REQUIREMENT: 'navigation section (using a <nav> element) on each page'
+  -->
+  <header>
+    <nav>
+      <h1 class="font-serif-heading">Joshua Chiang</h1>
+      <ul>
+        <!-- This is the 'Home' page, so it gets the 'active' class -->
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="experience.html" class="nav-link">Experience</a></li>
+        <li><a href="projects.html" class="nav-link">Projects</a></li>
+        <li><a href="resume.html" class="nav-link">Resume</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="hobbies.html" class="nav-link">Hobbies</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 
+    REQUIREMENT: 'add space (either margin or padding is fine) around the page content'
+    This is handled by the 'main' selector in style.css
+  -->
+  <main>
+
+    <!-- This is one of your '5 interlinked pages' -->
+    <section id="home">
+      <!-- 
+        REQUIREMENT: 'at least two levels of heading elements' (This is H1)
+      -->
+      <h1 class="font-serif-heading">
+        Undergraduate Electrical Engineering Student
+      </h1>
+
+      <!-- 
+        REQUIREMENT: 'a paragraph'
+        REQUIREMENT: 'styling changes... in at least 4 elements' (Element 1: <strong>)
+      -->
+      <p>
+        Welcome to my website! The purpose of this site is to showcase my <strong>personal and academic
+          interests</strong> as an undergraduate electrical engineering student. The goal is to provide a professional
+        platform for sharing my work, connecting with peers, and documenting my progress.
+      </p>
+
+      <!-- 
+        REQUIREMENT: 'three images (that is NOT a background image)' (Image 1)
+        REQUIREMENT: 'alt tags for images'
+      -->
+      <img src="https://placehold.co/800x400/8ECAE6/33475B?text=Welcome+Image+Here"
+        alt="A placeholder image representing an electrical engineering project.">
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Joshua Chiang. All Rights Reserved.</p>
+      <p class="footer-note">
+        This website was hand-coded for LIS351 at UW-Madison.
+      </p>
+    </div>
+  </footer>
+
 </body>
+
 </html>
+

@@ -1,31 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Resume - Your Name</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- REQUIREMENT: 'an <title> element (must be present and correct on all pages)' -->
+  <title>Joshua Chiang - Resume</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="experience.html">Experience</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="resume.html" aria-current="page">Resume</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="hobbies.html">Hobbies</a></li>
-    </ul>
-  </nav>
-  <h1>Resume</h1>
-  <h2>Download</h2>
-  <p><a href="files/yourresume.pdf" download>Download my resume (PDF)</a></p>
-  <h2>Summary</h2>
-  <p>Undergraduate Electrical Engineering student with research experience in quantum simulation and semiconductor testing.</p>
-  <ul>
-    <li>Skills: ARTIQ Quantum Control, Signal Processing, Programming (Python, RISC-V)</li>
-    <li>Work Experience: Research Assistant, Volunteer Coordination</li>
-    <li>Education: University of California, Berkeley</li>
-  </ul>
+
+  <!-- 
+    REQUIREMENT: 'navigation section (using a <nav> element) on each page'
+  -->
+  <header>
+    <nav>
+      <h1 class="font-serif-heading">Joshua Chiang</h1>
+      <ul>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="experience.html" class="nav-link">Experience</a></li>
+        <li><a href="projects.html" class="nav-link">Projects</a></li>
+        <!-- This is the 'Resume' page, so it gets the 'active' class -->
+        <li><a href="resume.html" class="nav-link active">Resume</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="hobbies.html" class="nav-link">Hobbies</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- This div is one of your '5 interlinked pages' -->
+    <section id="resume">
+      <h2 class="font-serif-heading">Resume & Skills</h2>
+      <p>
+        Contains my up-to-date resume with summaries of education, skills, and work history.
+      </p>
+      <!-- This 'btn' class is defined in style.css -->
+      <a href="#" class="btn">
+        Download Resume PDF (coming soon)
+      </a>
+
+      <h3 class="font-serif-heading">Key Skills</h3>
+      <!-- 
+        REQUIREMENT: 'a list (ordered or unordered)'
+      -->
+      <ul>
+        <li>Programming: Python, C/C++, MATLAB</li>
+        <li>Hardware: Arduino, Raspberry Pi, VHDL, Verilog</li>
+        <li>Software: AutoCAD, LTspice, LabVIEW</li>
+        <li>Lab Equipment: Oscilloscope, Multimeter, Power Supply</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Joshua Chiang. All Rights Reserved.</p>
+      <p class="footer-note">
+        This website was hand-coded for LIS351 at UW-Madison.
+      </p>
+    </div>
+  </footer>
+
 </body>
+
 </html>

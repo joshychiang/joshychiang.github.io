@@ -1,31 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact - Your Name</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- REQUIREMENT: 'an <title> element (must be present and correct on all pages)' -->
+  <title>Joshua Chiang - Contact</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="experience.html">Experience</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="resume.html">Resume</a></li>
-      <li><a href="contact.html" aria-current="page">Contact</a></li>
-      <li><a href="hobbies.html">Hobbies</a></li>
-    </ul>
-  </nav>
-  <h1>Contact Me</h1>
-  <form action="mailto:your.email@example.com" method="post" enctype="text/plain">
-    <label for="name">Name:</label><br/>
-    <input type="text" id="name" name="name" required /><br/><br/>
-    <label for="email">Email:</label><br/>
-    <input type="email" id="email" name="email" required /><br/><br/>
-    <label for="message">Message:</label><br/>
-    <textarea id="message" name="message" rows="5" required></textarea><br/><br/>
-    <input type="submit" value="Send" />
-  </form>
+
+  <!-- 
+    REQUIREMENT: 'navigation section (using a <nav> element) on each page'
+  -->
+  <header>
+    <nav>
+      <h1 class="font-serif-heading">Joshua Chiang</h1>
+      <ul>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="experience.html" class="nav-link">Experience</a></li>
+        <li><a href="projects.html" class="nav-link">Projects</a></li>
+        <li><a href="resume.html" class="nav-link">Resume</a></li>
+        <!-- This is the 'Contact' page, so it gets the 'active' class -->
+        <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        <li><a href="hobbies.html" class="nav-link">Hobbies</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- This div is one of your '5 interlinked pages' -->
+    <section id="contact">
+      <h2 class="font-serif-heading">Contact</h2>
+      <p>
+        Includes links for networking, references, and collaboration inquiries. Feel free to reach out!
+      </p>
+
+      <!-- 
+        REQUIREMENT: 'a hyperlink to somewhere on the web outside your website'
+        This links to LinkedIn and uses "meaningful link text" for accessibility.
+      -->
+      <p>
+        You can find me on
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+          LinkedIn
+        </a>.
+      </p>
+
+      <!-- REQUIREMENT: 'styling changes... in at least 4 elements' (Element 4: `text-xl` class) -->
+      <p class="text-xl">
+        Or email me at: <span style="font-weight: 500;">jchiang-example@wisc.edu</span>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Joshua Chiang. All Rights Reserved.</p>
+      <p class="footer-note">
+        This website was hand-coded for LIS351 at UW-Madison.
+      </p>
+    </div>
+  </footer>
+
 </body>
+
 </html>
