@@ -4,56 +4,99 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- REQUIREMENT: 'an <title> element (must be present and correct on all pages)' -->
   <title>Joshua Chiang - Hobbies</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="flex flex-col min-h-screen">
 
-  <!-- 
-    REQUIREMENT: 'navigation section (using a <nav> element) on each page'
-  -->
-  <header>
-    <nav>
-      <h1 class="font-serif-heading">Joshua Chiang</h1>
-      <ul>
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="experience.html" class="nav-link">Experience</a></li>
-        <li><a href="projects.html" class="nav-link">Projects</a></li>
-        <li><a href="resume.html" class="nav-link">Resume</a></li>
-        <li><a href="contact.html" class="nav-link">Contact</a></li>
-        <!-- This is the 'Hobbies' page, so it gets the 'active' class -->
-        <li><a href="hobbies.html" class="nav-link active">Hobbies</a></li>
+  <header class="bg-nav-blue text-white p-5 sticky top-0 shadow-lg z-10">
+    <nav class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-serif-heading">Joshua Chiang</h1>
+      <ul class="flex space-x-6">
+        <li><a href="index.html" class="nav-link hover:text-accent-yellow transition-colors duration-200">Home</a></li>
+        <li><a href="experience.html" class="nav-link hover:text-accent-yellow transition-colors duration-200">Experience</a></li>
+        <li><a href="projects.html" class="nav-link hover:text-accent-yellow transition-colors duration-200">Projects</a></li>
+        <li><a href="resume.html" class="nav-link hover:text-accent-yellow transition-colors duration-200">Resume</a></li>
+        <li><a href="contact.html" class="nav-link hover:text-accent-yellow transition-colors duration-200">Contact</a></li>
+        <li><a href="hobbies.html" class="nav-link active hover:text-accent-yellow transition-colors duration-200">Hobbies</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <!-- This div is one of your '5 interlinked pages' -->
+  <main class="container max-w-4xl mx-auto p-8 flex-grow">
     <section id="hobbies">
-      <h2 class="font-serif-heading">Hobbies & Interests</h2>
-      <p>
+      <h2 class="text-3xl font-serif-heading mb-6 text-nav-blue">Hobbies & Interests</h2>
+      <p class="text-lg mb-8">
         When I'm not in the lab, here are a few things I enjoy.
       </p>
-      <!-- This is a bonus list, but it's good for content! -->
-      <ul>
-        <li>Tennis</li>
-        <li>Playing Bass</li>
-        <li>Travel</li>
-      </ul>
+      
+      <div class="space-y-12">
+
+        <div class="flex flex-col md:flex-row items-center bg-gray-50 p-6 rounded-lg shadow-md border-2 border-accent-sage">
+          <div class="md:w-2/3 md:pr-6">
+            <h3 class="text-2xl font-serif-heading text-nav-blue mb-2">Tennis</h3>
+            <p class="text-lg">
+              I'm an avid tennis player was part of my school team in high school where we won the CIF SoCal championship.
+            </p>
+          </div>
+          <div class="md:w-1/3 mt-4 md:mt-0">
+            <img src="tennis.png" 
+                 alt="Group tennis photo"
+                 class="w-full h-auto rounded-lg shadow-lg">
+          </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row-reverse items-center bg-gray-50 p-6 rounded-lg shadow-md border-2 border-accent-sage">
+          <div class="md:w-2/3 md:pl-6">
+            <h3 class="text-2xl font-serif-heading text-nav-blue mb-2">Hiking</h3>
+            <p class="text-lg">
+              I grew up in the city but I love the outdoors. Every year I try to go on at least one big hiking trip to explore nature with my siblings
+            </p>
+          </div>
+          <div class="md:w-1/3 mt-4 md:mt-0">
+            <img src="hiking.jpg" 
+                 alt="Picture of hiking."
+                 class="w-full h-auto rounded-lg shadow-lg">
+          </div>
+        </div>
+
+        <!-- Hobby 3: Travel -->
+        <div class="flex flex-col md:flex-row items-center bg-gray-50 p-6 rounded-lg shadow-md border-2 border-accent-sage">
+          <div class="md:w-2/3 md:pr-6">
+            <h3 class="text-2xl font-serif-heading text-nav-blue mb-2">Travel</h3>
+            <p class="text-lg">
+              Seeing new architecture and experiencing other cultures is one of my favorite things to do. I'm always planning my next trip.
+            </p>
+          </div>
+          <div class="md:w-1/3 mt-4 md:mt-0">
+            <!-- 
+              This is one of the 3 required images (if you need it).
+              REQUIREMENT: 'alt tags for images'
+            -->
+            <img src="Travel.jpg" 
+                 alt="Photo from my travels."
+                 class="w-full h-auto rounded-lg shadow-lg">
+          </div>
+        </div>
+
+      </div>
     </section>
   </main>
 
-  <footer>
-    <div class="container">
+  <footer class="bg-nav-blue text-white p-6 mt-8">
+    <div class="container mx-auto text-center">
       <p>&copy; 2025 Joshua Chiang. All Rights Reserved.</p>
-      <p class="footer-note">
+      <p class="text-sm text-gray-400 mt-2">
         This website was hand-coded for LIS351 at UW-Madison.
-      </p>
+      </spp>
     </div>
   </footer>
 
 </body>
 
 </html>
+

@@ -4,16 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- REQUIREMENT: 'an <title> element (must be present and correct on all pages)' -->
   <title>Joshua Chiang - Resume</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
-  <!-- 
-    REQUIREMENT: 'navigation section (using a <nav> element) on each page'
-  -->
   <header>
     <nav>
       <h1 class="font-serif-heading">Joshua Chiang</h1>
@@ -21,7 +16,6 @@
         <li><a href="index.html" class="nav-link">Home</a></li>
         <li><a href="experience.html" class="nav-link">Experience</a></li>
         <li><a href="projects.html" class="nav-link">Projects</a></li>
-        <!-- This is the 'Resume' page, so it gets the 'active' class -->
         <li><a href="resume.html" class="nav-link active">Resume</a></li>
         <li><a href="contact.html" class="nav-link">Contact</a></li>
         <li><a href="hobbies.html" class="nav-link">Hobbies</a></li>
@@ -29,27 +23,40 @@
     </nav>
   </header>
 
-  <main>
-    <!-- This div is one of your '5 interlinked pages' -->
+  <main class="container max-w-4xl mx-auto p-8 flex-grow">
     <section id="resume">
-      <h2 class="font-serif-heading">Resume & Skills</h2>
-      <p>
-        Contains my up-to-date resume with summaries of education, skills, and work history.
+      <h2 class="text-3xl font-serif-heading mb-6 text-nav-blue">Resume & Proficiencies</h2>
+      <p class="text-lg mb-4">
+        Here is a summary of my education and skills. For a full list of my work and project experience, please see the dedicated pages.
       </p>
-      <!-- This 'btn' class is defined in style.css -->
-      <a href="#" class="btn">
-        Download Resume PDF (coming soon)
+      
+      <a href="Joshua_Chiang_Resume.pdf" target="_blank"
+        class="inline-block bg-accent-light-blue text-nav-blue font-bold py-2 px-4 rounded-lg hover:bg-accent-yellow transition-colors duration-200 mb-8">
+        Download Full Resume (PDF)
       </a>
 
-      <h3 class="font-serif-heading">Key Skills</h3>
-      <!-- 
-        REQUIREMENT: 'a list (ordered or unordered)'
-      -->
-      <ul>
-        <li>Programming: Python, C/C++, MATLAB</li>
-        <li>Hardware: Arduino, Raspberry Pi, VHDL, Verilog</li>
-        <li>Software: AutoCAD, LTspice, LabVIEW</li>
-        <li>Lab Equipment: Oscilloscope, Multimeter, Power Supply</li>
+      <h3 class="text-2xl font-serif-heading mb-3 text-nav-blue">Education</h3>
+      <div class="mb-6">
+        <p class="text-xl font-semibold">University of Wisconsin - Madison</p>
+        <p class="text-lg">Major: Electrical Engineering, B.S. | Graduation: Spring 2027</p>
+      </div>
+
+      <h3 class="text-2xl font-serif-heading mb-3 text-nav-blue">Selected Proficiencies</h3>
+
+      <h4 class="text-xl font-semibold text-nav-blue mt-4 mb-2">Software & Coding</h4>
+      <ul class="list-disc list-inside space-y-2 text-lg">
+        <li>MATLAB | Python | JAVA | C++ | Assembly | Verilog</li>
+        <li>AutoCAD | SolidWorks | Origin | Avantage | LTSpice | Altium</li>
+        <li>Linux | Git | Web development | Adobe Creative Cloud | BLAST | Microsoft Office</li>
+      </ul>
+
+      <h4 class="text-xl font-semibold text-nav-blue mt-6 mb-2">Lab Skills & Instruments</h4>
+      <ul class="list-disc list-inside space-y-2 text-lg">
+        <li>X-ray photoelectron spectroscopy (XPS)</li>
+        <li>Circuitry and circuit analysis</li>
+        <li>Arduino and breadboards</li>
+        <li>Raspberry Pi</li>
+        <li>PCB design</li>
       </ul>
     </section>
   </main>

@@ -4,23 +4,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- REQUIREMENT: 'an <title> element (must be present and correct on all pages)' -->
   <title>Joshua Chiang - Projects</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
-  <!-- 
-    REQUIREMENT: 'navigation section (using a <nav> element) on each page'
-  -->
   <header>
     <nav>
       <h1 class="font-serif-heading">Joshua Chiang</h1>
       <ul>
         <li><a href="index.html" class="nav-link">Home</a></li>
         <li><a href="experience.html" class="nav-link">Experience</a></li>
-        <!-- This is the 'Projects' page, so it gets the 'active' class -->
         <li><a href="projects.html" class="nav-link active">Projects</a></li>
         <li><a href="resume.html" class="nav-link">Resume</a></li>
         <li><a href="contact.html" class="nav-link">Contact</a></li>
@@ -30,11 +24,6 @@
   </header>
 
   <main>
-    <!-- 
-      This div is one of your '5 interlinked pages'
-      REQUIREMENT: 'At least one page has a unique layout of content'
-      This page uses a CSS Grid (via 'projects-grid' class), which is unique.
-    -->
     <section id="projects">
       <h2 class="font-serif-heading">Projects</h2>
       <p>
@@ -44,23 +33,31 @@
       <div class="projects-grid">
         <!-- Project 1 -->
         <div class="project-card">
-          <!-- REQUIREMENT: 'three images' (Image 2) + 'alt tags' -->
-          <img src="https://placehold.co/400x300/F5CB5C/33475B?text=Project+1"
-            alt="Placeholder for Project 1.">
-          <h3 class="font-serif-heading">Project Title 1</h3>
-          <p>A description of the project, the technologies used, and the outcomes.
-            <!-- REQUIREMENT: 'styling changes... in at least 4 elements' (Element 3: `text-blue-600` class) -->
-            <span class="text-blue-600">Technologies: C++, Arduino, PCB Design</span>
+          <img src="Design_Practicum_Final_Poster.jpg"
+            alt="Door sensor poster">
+            <img src="3D print.jpg"
+            alt="3D Printing process picture">
+            <img src="Group.jpg"
+            alt="Group photo">
+          <h3 class="font-serif-heading">Room Traffic Door Sensor for UW Madison Makerspace</h3>
+          <p>My main responsibilities were designing and building the door sensor hardware, including selecting components,
+            assembling the circuit, and integrating it with the existing system.
+            <span class="text-blue-600">Technologies: Python, Raspberry Pi, Solidworks</span>
           </p>
         </div>
         <!-- Project 2 -->
         <div class="project-card">
-          <!-- REQUIREMENT: 'three images' (Image 3) + 'alt tags' -->
-          <img src="https://placehold.co/400x300/F5CB5C/33475B?text=Project+2"
-            alt="Placeholder for Project 2.">
-          <h3 class="font-serif-heading">Project Title 2</h3>
-          <p>A description of the project, the technologies used, and the outcomes.
-            <span class="text-blue-600">Technologies: Python, Raspberry Pi, MATLAB</span>
+          <img src="Lab.jpg"
+            alt="Picture of Working in lab.">
+          <img src="Singlet-Fission.jpg"
+            alt="Picture of Working in lab.">
+            <img src="Data.jpg"
+            alt="Sample data organized using origin">
+          <h3 class="font-serif-heading">High-Efficiency Photovoltaics Exploiting Singlet Fission</h3>
+          <p>In this research project, I assisted in the fabrication and characterization of organic semiconductor 
+            devices that utilize singlet fission to enhance photovoltaic efficiency. My main responsibilites were runing regular
+            tests on silicon samples passivated with different chemical treatments to analyze their effects on device performance.
+            <span class="text-blue-600">Technologies: XPS, Origin, Avantage</span>
           </p>
         </div>
       </div>
