@@ -5,41 +5,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Joshua Chiang - Experience</title>
-  
-  <script src="https://cdn.tailwindcss.com"></script>
-  
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="flex flex-col min-h-screen">
+<body>
 
-
-  <header class="bg-nav-blue text-white p-5 sticky top-0 shadow-lg z-10">
-    <nav class="container mx-auto flex justify-between items-center">
-      <h1 class="text-2xl font-serif-heading">Joshua Chiang</h1>
-      <ul class="flex space-x-6">
-        <li><a href="index.html" class="nav-link hover:text-accent-yellow transition-colors duration-200">Home</a></li>
-        <li><a href="experience.html" class="nav-link active hover:text-accent-yellow transition-colors duration-200">Experience</a></li>
-        <li><a href="projects.html" class="nav-link hover:text-accent-yellow transition-colors duration-200">Projects</a></li>
-        <li><a href="resume.html" class="nav-link hover:text-accent-yellow transition-colors duration-200">Resume</a></li>
-        <li><a href="contact.html" class="nav-link hover:text-accent-yellow transition-colors duration-200">Contact</a></li>
-        <li><a href="hobbies.html" class="nav-link hover:text-accent-yellow transition-colors duration-200">Hobbies</a></li>
+  <header>
+    <nav>
+      <h1 class="font-serif-heading">Joshua Chiang</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <!-- This is the 'Experience' page, so it gets the 'active' class -->
+        <li><a href="experience.html" class="active">Experience</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="hobbies.html">Hobbies</a></li>
       </ul>
     </nav>
   </header>
 
-  <main class="container max-w-4xl mx-auto p-8 flex-grow">
+  <main>
     <section id="experience">
-      <h2 class="text-3xl font-serif-heading mb-6 text-nav-blue">Work & Research Experience</h2>
+      <h2 class="font-serif-heading">Work & Research Experience</h2>
 
-      <dl class="space-y-8">
-
+      <dl>
         <!-- Experience 1 -->
         <div>
-          <dt class="text-xl font-semibold text-nav-blue">The Jacobberger Group - Madison, WI</dt>
-          <dd class="ml-4">
-            <em class="font-medium text-lg">Undergraduate Researcher (Sep 2023 - Present)</em>
-            <ul class="list-disc list-outside ml-6 mt-2 space-y-1 text-lg">
+          <dt>The Jacobberger Group - Madison, WI</dt>
+          <dd>
+            <em>Undergraduate Researcher (Sep 2023 - Present)</em>
+            <ul>
               <li>Conducted systematic X-ray Photoelectron Spectroscopy (XPS) analysis on silicon-graphene layers to test various passivation techniques.</li>
               <li>Processed and analyzed XPS spectra data using MATLAB, compiled data visuals in Origin.</li>
               <li>Summarized experimental findings and presented results in group meetings, contributing to ongoing discussions on materials selection and device architecture.</li>
@@ -49,10 +45,10 @@
 
         <!-- Experience 2 -->
         <div>
-          <dt class="text-xl font-semibold text-nav-blue">HL Display Ltd. & Holo General Equipment Ltd. - Hong Kong</dt>
-          <dd class="ml-4">
-            <em class="font-medium text-lg">Electronics Engineer (Jun 2024 - Aug 2024)</em>
-            <ul class="list-disc list-outside ml-6 mt-2 space-y-1 text-lg">
+          <dt>HL Display Ltd. & Holo General Equipment Ltd. - Hong Kong</dt>
+          <dd>
+            <em>Electronics Engineer (Jun 2024 - Aug 2024)</em>
+            <ul>
               <li>Interpreted electrical schematics for the assembly and wiring of electronics.</li>
               <li>Designed and constructed copper core 3-watt PCBs for the manufacturing of a color-changing LED product.</li>
               <li>Debugged circuit designs using electronic hardware, including oscilloscopes and multimeters.</li>
@@ -62,10 +58,10 @@
         
         <!-- Experience 3 -->
         <div>
-          <dt class="text-xl font-semibold text-nav-blue">TuringSense, Inc. - Santa Clara, CA</dt>
-          <dd class="ml-4">
-            <em class="font-medium text-lg">Electrical Engineering Intern (Jun 2022 - Jul 2022)</em>
-            <ul class="list-disc list-outside ml-6 mt-2 space-y-1 text-lg">
+          <dt>TuringSense, Inc. - Santa Clara, CA</dt>
+          <dd>
+            <em>Electrical Engineering Intern (Jun 2022 - Jul 2022)</em>
+            <ul>
               <li>Assisted in the development and iteration of electrical and mechanical schematics of an exosuit prototype.</li>
               <li>Integrated multi-sensor data streams (3D motion data from 6-axis IMUs) using proprietary sensor fusion algorithms to enable real-time, camera-less 3D motion capture for biomechanics applications.</li>
               <li>Implemented edge impulse-based machine learning models on C++ to distinguish flexion/extension movements for physical posture analysis.</li>
@@ -75,27 +71,25 @@
 
         <!-- Experience 4 -->
         <div>
-          <dt class="text-xl font-semibold text-nav-blue">National Science Foundation</dt>
-          <dd class="ml-4">
-            <em class="font-medium text-lg">ML Trainer (Volunteer) (2020 - Present)</em>
-            <ul class="list-disc list-outside ml-6 mt-2 space-y-1 text-lg">
+          <dt>National Science Foundation</dt>
+          <dd>
+            <em>ML Trainer (Volunteer) (2020 - Present)</em>
+            <ul>
               <li>Completed 9,000+ data classifications, such as analyzing images from the ATLAS inner detector for displaced vertices, identifying biological structures in microscopic images, and transcribing hospital records.</li>
             </ul>
           </dd>
         </div>
-
       </dl>
 
-      <h2 class="text-3xl font-serif-heading mb-6 mt-12 text-nav-blue">Extracurricular Activities & Projects</h2>
+      <h2 class="font-serif-heading">Extracurricular Activities & Projects</h2>
       
-      <dl class="space-y-8">
-
+      <dl>
         <!-- Project 1: Wisconsin Autonomous -->
         <div>
-          <dt class="text-xl font-semibold text-nav-blue">Wisconsin Autonomous - Madison, WI</dt>
-          <dd class="ml-4">
-            <em class="font-medium text-lg">Hardware Engineer (2025 Jan - Present)</em>
-            <ul class="list-disc list-outside ml-6 mt-2 space-y-1 text-lg">
+          <dt>Wisconsin Autonomous - Madison, WI</dt>
+          <dd>
+            <em>Hardware Engineer (2025 Jan - Present)</em>
+            <ul>
               <li>Placed 2<sup>nd</sup> overall in the Year 4 SAE Autodrive Challenge (2025)</li>
               <li>Developed comprehensive testing environments and scenarios to validate autonomous driving capabilities with the team, leading to a 212% improvement in Systems Safety score vs. Year 3</li>
               <li>Plotted electrical wiring diagram with hardware team for autonomous blue light operation (blue lights on the vehicle are turned on to indicate autonomous mode) using Altium</li>
@@ -106,10 +100,10 @@
 
         <!-- Project 2: Design Practicum -->
         <div>
-          <dt class="text-xl font-semibold text-nav-blue">Design Practicum - Madison, WI</dt>
-          <dd class="ml-4">
-            <em class="font-medium text-lg">Head Programmer & Library Researcher (Sep 2023 - Dec 2023)</em>
-            <ul class="list-disc list-outside ml-6 mt-2 space-y-1 text-lg">
+          <dt>Design Practicum - Madison, WI</dt>
+          <dd>
+            <em>Head Programmer & Library Researcher (Sep 2023 - Dec 2023)</em>
+            <ul>
               <li>Collaborated with student engineers to design and develop a door sensor for UW Madison's fabrication facilities</li>
               <li>Coded the motion sensing function in Python for the visitor counter</li>
               <li>Achieved 98% accuracy in a sample of 194 subjects</li>
@@ -117,22 +111,18 @@
             </ul>
           </dd>
         </div>
-
       </dl>
     </section>
   </main>
 
-  <footer class="bg-nav-blue text-white p-6 mt-8">
-    <div class="container mx-auto text-center">
-      <p>&copy; 2025 Joshua Chiang. All Rights Reserved.</p>
-      <p class="text-sm text-gray-400 mt-2">
-        This website was hand-coded for LIS351 at UW-Madison.
-      </p>
-    </div>
+  <footer>
+    <p>&copy; 2025 Joshua Chiang. All Rights Reserved.</p>
+    <p class="footer-note">
+      This website was hand-coded for LIS351 at UW-Madison.
+    </p>
   </footer>
 
 </body>
 
 </html>
-
 

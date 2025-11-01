@@ -9,16 +9,11 @@ body {
   min-height: 100vh;
 }
 
-/* REQUIREMENT: 'change the font for at least one element to a serif font...'
-  This class will be applied to h1, h2, h3 for the serif font.
-*/
 .font-serif-heading {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-/* REQUIREMENT: 'navigation section (using a <nav> element) on each page'
-  This styles the header and nav bar.
-*/
+/* Header & Navigation */
 header {
   background-color: #33475B; /* Dark Blue */
   color: white;
@@ -53,10 +48,13 @@ nav li {
   margin-left: 24px;
 }
 
+/* These rules style the nav links directly,
+  so 'class="nav-link"' is not needed.
+*/
 nav a {
   color: white;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 500;
   transition: color 0.2s;
 }
 
@@ -67,19 +65,18 @@ nav a:hover {
 /* Style for the "active" navigation link */
 nav a.active {
   color: #F5CB5C; /* Yellow */
+  font-weight: bold;
 }
 
-/* REQUIREMENT: 'add space (either margin or padding is fine) around the page content'
-  This <main> tag gets padding and is centered.
-*/
+/* Main Content Area */
 main {
-  max-width: 896px; /* 4xl */
+  max-width: 896px; /* Similar to max-w-4xl */
   margin: 0 auto; /* centers content */
-  padding: 32px; /* p-8 */
+  padding: 32px; /* Similar to p-8 */
   flex-grow: 1; /* Pushes footer down */
 }
 
-/* Headings */
+/* Typography */
 h1 {
   font-size: 2.25rem; /* 36px */
   margin-bottom: 16px;
@@ -93,32 +90,70 @@ h2 {
 }
 
 h3 {
+  font-size: 1.5rem; /* 24px */
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #33475B; /* Dark Blue */
+}
+
+h4 {
   font-size: 1.25rem; /* 20px */
   font-weight: 600;
   margin-bottom: 8px;
   color: #33475B; /* Dark Blue */
 }
 
-/* REQUIREMENT: 'a paragraph'
-*/
 p {
   font-size: 1.125rem; /* 18px */
   line-height: 1.6;
   margin-bottom: 24px;
 }
 
-/* REQUIREMENT: 'three images' & 'alt tags'
-  This styles all images inside the main content.
-*/
 main img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* margin-bottom: 1rem; <-- Removed this default margin */
 }
 
-/* REQUIREMENT: 'a description list'
+/* --- NEW STYLES FOR SPECIFIC IMAGES --- */
+.img-home-profile {
+  width: 400px;  /* Set a fixed width */
+  height: 400px; /* Set a fixed height to make it a perfect circle */
+  border-radius: 50%; /* This makes it circular */
+  object-fit: cover; /* Prevents the image from stretching */
+  display: block; /* Allows for auto margins */
+  margin: 24px auto; /* Centers the image and adds space */
+  border: 4px solid #8ECAE6; /* Adds an accent color border */
+}
+
+/* This class is now REMOVED */
+/*
+.img-contact-main {
+  max-width: 600px; 
+  display: block;
+  margin: 24px auto;
+}
 */
+
+/* --- REPLACED with a non-circular style for "Thank You" image --- */
+.img-contact-main {
+  max-width: 600px;  /* Limits the size */
+  height: auto;
+  display: block; /* Allows for auto margins */
+  margin: 24px auto; /* Centers the image and adds space */
+  border-radius: 8px; /* Standard rounded corners, not a circle */
+}
+
+.img-contact-icon {
+  width: 100px; /* Makes the icon small */
+  height: auto;
+  margin-bottom: 24px;
+}
+/* ------------------------------------- */
+
+/* Lists */
 dl {
   margin-top: 24px;
 }
@@ -129,35 +164,31 @@ dt {
 }
 dd {
   margin-left: 20px;
-  margin-bottom: 24px;
+  margin-bottom: 32px; /* space-y-8 */
 }
 
-/* REQUIREMENT: 'a list (ordered or unordered)'
-*/
-ul {
+main ul {
   list-style-type: disc;
-  list-style-position: inside;
+  list-style-position: outside;
   margin-bottom: 24px;
-  padding-left: 20px;
+  padding-left: 24px;
 }
-ul li {
+main ul li {
   font-size: 1.125rem; /* 18px */
   line-height: 1.6;
   margin-bottom: 8px;
 }
 
-/* REQUIREMENT: 'a hyperlink to somewhere on the web outside your website'
-*/
+/* Links & Buttons */
 main a {
   color: #8ECAE6; /* Light Blue */
-  font-weight: bold;
+  font-weight: 500;
   text-decoration: underline;
 }
 main a:hover {
   color: #F5CB5C; /* Yellow */
 }
 
-/* Special Button style for Resume page */
 .btn {
   display: inline-block;
   background-color: #8ECAE6; /* Light Blue */
@@ -174,64 +205,136 @@ main a:hover {
   color: #33475B; /* Dark Blue */
 }
 
+/* Page-Specific Layouts */
 
-/* REQUIREMENT: 'At least one page has a unique layout of content'
-  This grid layout is for projects.html
-*/
+/* Projects Page Grid */
 .projects-grid {
   display: grid;
   grid-template-columns: 1fr; /* Default to 1 column */
   gap: 24px;
 }
-
-/* On medium screens and up (like tablets/desktops), switch to 2 columns */
-@media (min-width: 768px) {
-  .projects-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
 .project-card {
   border: 2px solid #8AA29E; /* Sage Green */
   border-radius: 8px;
   padding: 16px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  background-color: #f9f9f9;
 }
 .project-card img {
   margin-bottom: 16px;
 }
 
-/* REQUIREMENT: 'styling changes... in at least 4 elements'
-  1. <strong> (bold) - Used on index.html
-  2. <em> (italic) - Used on experience.html
-  3. .text-blue-600 (color change) - Used on projects.html
-  4. .text-xl (font size change) - Used on contact.html
-*/
+/* Hobbies Page Layout */
+.hobbies-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.hobby-card {
+  display: flex;
+  flex-direction: column; /* Mobile first */
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 24px;
+  border-radius: 8px;
+  border: 2px solid #8AA29E; /* Sage Green */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+.hobby-card .hobby-text {
+  flex-basis: 66%; /* 2/3 */
+}
+.hobby-card .hobby-image {
+  flex-basis: 33%; /* 1/3 */
+  margin-top: 16px;
+}
+
+/* Resume Page Card */
+.info-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+.info-card p {
+  margin-bottom: 4px;
+}
+
+
+/* Styling Extras */
 .text-blue-600 {
   color: #2563eb; /* A distinct blue */
   font-weight: 500;
+  display: block; /* Makes it stack nicely */
+  margin-top: 8px;
 }
 .text-xl {
   font-size: 1.25rem; /* 20px */
 }
 
-
-/* Footer styling */
+/* Footer */
 footer {
   background-color: #33475B; /* Dark Blue */
   color: white;
   padding: 24px;
-  margin-top: 32px;
+  margin-top: 32px; 
   text-align: center;
 }
-
 footer p {
   margin: 0;
   font-size: 1rem; /* 16px */
+  line-height: 1.5;
 }
-
-footer .footer-note {
+.footer-note {
   font-size: 0.875rem; /* 14px */
   color: #cbd5e1; /* A lighter gray-blue */
   margin-top: 8px;
 }
+
+
+/* Responsive Media Queries */
+
+@media (min-width: 768px) {
+  /* Switch projects to 2 columns */
+  .projects-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  /* Switch hobbies to horizontal rows */
+  .hobby-card {
+    flex-direction: row;
+  }
+  .hobby-card .hobby-text {
+    padding-right: 24px;
+  }
+  .hobby-card .hobby-image {
+    margin-top: 0;
+  }
+  .hobby-card.reverse {
+    flex-direction: row-reverse;
+  }
+  .hobby-card.reverse .hobby-text {
+    padding-right: 0;
+    padding-left: 24px;
+  }
+}
+
+/* Responsive Nav for small screens */
+@media (max-width: 640px) {
+  nav {
+    flex-direction: column;
+    gap: 16px;
+  }
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+  nav li {
+    margin-left: 8px;
+  }
+}
+
+
+
+
