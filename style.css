@@ -25,8 +25,6 @@ header {
 }
 
 nav {
-  max-width: 1000px;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -48,9 +46,7 @@ nav li {
   margin-left: 24px;
 }
 
-/* These rules style the nav links directly,
-  so 'class="nav-link"' is not needed.
-*/
+
 nav a {
   color: white;
   text-decoration: none;
@@ -80,7 +76,7 @@ main {
 h1 {
   font-size: 2.25rem; /* 36px */
   margin-bottom: 16px;
-  color: #33475B; /* Dark Blue */
+  color: #F5CB5C; /* Yellow */
 }
 
 h2 {
@@ -113,8 +109,6 @@ main img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  /* margin-bottom: 1rem; <-- Removed this default margin */
 }
 
 /* --- NEW STYLES FOR SPECIFIC IMAGES --- */
@@ -128,16 +122,7 @@ main img {
   border: 4px solid #8ECAE6; /* Adds an accent color border */
 }
 
-/* This class is now REMOVED */
-/*
-.img-contact-main {
-  max-width: 600px; 
-  display: block;
-  margin: 24px auto;
-}
-*/
 
-/* --- REPLACED with a non-circular style for "Thank You" image --- */
 .img-contact-main {
   max-width: 600px;  /* Limits the size */
   height: auto;
