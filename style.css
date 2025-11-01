@@ -79,6 +79,12 @@ h1 {
   color: #F5CB5C; /* Yellow */
 }
 
+.title-heading {
+  font-size: 2.25rem; /* 36px */
+  margin-bottom: 16px;
+  color: #33475B; /* Dark blue */
+}
+
 h2 {
   font-size: 1.875rem; /* 30px */
   margin-bottom: 24px;
